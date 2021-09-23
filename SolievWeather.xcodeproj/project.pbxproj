@@ -17,6 +17,7 @@
 		CE89308426FC59CB006807C0 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE89308326FC59CB006807C0 /* TableViewController.swift */; };
 		CE89308B26FC5B77006807C0 /* citiesNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE89308A26FC5B77006807C0 /* citiesNameCell.swift */; };
 		CE89308F26FC5CA8006807C0 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = CE89308E26FC5CA8006807C0 /* SwiftyJSON */; };
+		CEA610D126FC736000A6CF9B /* detailVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA610D026FC736000A6CF9B /* detailVCViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		CE2AD47126F8BB3F00A23695 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE89308326FC59CB006807C0 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		CE89308A26FC5B77006807C0 /* citiesNameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = citiesNameCell.swift; sourceTree = "<group>"; };
+		CEA610D026FC736000A6CF9B /* detailVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailVCViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				CE2AD46526F8BB3E00A23695 /* SceneDelegate.swift */,
 				CE2AD46726F8BB3E00A23695 /* ViewController.swift */,
 				CE2AD46926F8BB3E00A23695 /* Main.storyboard */,
+				CEA610D026FC736000A6CF9B /* detailVCViewController.swift */,
 				CE89308A26FC5B77006807C0 /* citiesNameCell.swift */,
 				CE89308326FC59CB006807C0 /* TableViewController.swift */,
 				CE2AD46C26F8BB3F00A23695 /* Assets.xcassets */,
@@ -157,6 +160,7 @@
 			files = (
 				CE2AD46826F8BB3E00A23695 /* ViewController.swift in Sources */,
 				CE89308B26FC5B77006807C0 /* citiesNameCell.swift in Sources */,
+				CEA610D126FC736000A6CF9B /* detailVCViewController.swift in Sources */,
 				CE2AD46426F8BB3E00A23695 /* AppDelegate.swift in Sources */,
 				CE2AD46626F8BB3E00A23695 /* SceneDelegate.swift in Sources */,
 				CE89308426FC59CB006807C0 /* TableViewController.swift in Sources */,

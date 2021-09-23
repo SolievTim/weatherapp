@@ -22,7 +22,7 @@ class TableViewController: UITableViewController {
     var cityTempArray: [Cities] = []
     
     func currentWeather(city: String) {
-        let url = "http://api.weatherapi.com/v1/current.json?key=https://github.com/SwiftyJSON/SwiftyJSON.git&q=London&aqi=no\(city)"
+        let url = "http://api.weatherapi.com/v1/current.json?key=4d472dc4c1924e5bab872302212309&q=\(city)"
         AF.request(url, method: .get).validate().responseJSON { response in switch response.result {
                 case .success(let value):
                     let json = JSON(value)
@@ -36,14 +36,17 @@ class TableViewController: UITableViewController {
         }
     }
     @IBAction func addCityAction(_ sender: UIButton) {
+        
         let alert = UIAlertController(title: "Add", message: "Write a name of city", preferredStyle: .alert)
         alert.addTextField { (textField) in textField.placeholder = "Moscow"}
+        
         let cancelAction = UIAlertAction(title: "Close", style: .cancel, handler: nil)
-        let newCityAction = UIAlertAction(title: "Add", style: .default) { (action) in
-            let name = alert.textFields![0].text
+        let newCityAction = UIAlertAction(title: "Add", style: .default) { (action) in let name = alert.textFields![0].text
+            
+            
+            
             self.currentWeather(city: name!)
         }
-        
         alert.addAction(cancelAction)
         alert.addAction(newCityAction)
         
@@ -69,5 +72,16 @@ class TableViewController: UITableViewController {
         cell.cityTemp.text = String(cityTempArray[indexPath.row].cityTemp)
         
         return cell
+    }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        cityName = cityTempArray[indexPath.row].cityName
+        performSegue(withIdentifier: "detailVC", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? detailVC {
+            vc.cityName = cityName
+        }
     }
 }
